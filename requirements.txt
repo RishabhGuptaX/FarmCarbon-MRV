@@ -1,0 +1,17 @@
+
+# FarmCarbon MRV - Python 3.12 dependencies
+
+streamlit==1.45.1
+pandas==2.2.3
+numpy==1.26.4
+plotly==5.24.1
+shapely==2.0.7
+pyproj==3.7.1
+folium==0.19.5
+streamlit-folium==0.24.0
+reportlab==4.2.5
+python-dotenv==1.0.1
+pytest==8.3.4
+
+# Optional: Earth Engine integration
+# earthengine-api
