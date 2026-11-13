@@ -1,6 +1,9 @@
 import streamlit as st
 
 st.set_page_config(page_title="Methodology | FarmCarbon MRV",layout="wide")
+from farmcarbon.components.theme import apply_theme
+apply_theme()
+
 st.title("Methodology & Data Limitations")
 st.caption("Transparent methods for the independent FarmCarbon MRV demonstrator.")
 

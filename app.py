@@ -7,6 +7,9 @@ from config.settings import settings
 
 st.set_page_config(page_title="FarmCarbon MRV | Dashboard", page_icon="🌱", layout="wide", initial_sidebar_state="expanded")
 
+from farmcarbon.components.theme import apply_theme
+apply_theme()
+
 @st.cache_resource
 def runtime():
     return build_runtime()
@@ -18,17 +21,6 @@ soils = repo.list("soil_samples")
 observations = repo.list("satellite_observations")
 practices = repo.list("practices")
 farm_name_map = {farm["id"]: farm["name"] for farm in farms}
-
-st.markdown("""
-<style>
-:root { --forest:#174D38; }
-.block-container {padding-top: 1.7rem; padding-bottom: 2rem; max-width: 1440px;}
-[data-testid="stSidebar"] {background:#F3F6F3;}
-h1,h2,h3 {color:#174D38;}
-[data-testid="stMetric"] {background:#F7FAF7;border:1px solid #E0E8E1;padding:14px 16px;border-radius:10px;}
-div.stButton > button[kind="primary"] {background:#174D38;border-color:#174D38;}
-</style>
-""", unsafe_allow_html=True)
 
 st.title("FarmCarbon MRV")
 st.caption("Agricultural carbon monitoring, reporting and verification workspace")

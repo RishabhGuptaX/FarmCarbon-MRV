@@ -6,6 +6,9 @@ from farmcarbon.runtime import build_runtime
 from farmcarbon.components.charts import render_index_chart
 
 st.set_page_config(page_title="Satellite Monitoring | FarmCarbon MRV", layout="wide")
+from farmcarbon.components.theme import apply_theme
+apply_theme()
+
 @st.cache_resource
 def runtime(): return build_runtime()
 rt=runtime(); repo=rt["repo"]

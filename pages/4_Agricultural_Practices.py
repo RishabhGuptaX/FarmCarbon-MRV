@@ -8,6 +8,9 @@ from config.settings import settings
 from farmcarbon.utils.file_manager import resolve_upload
 
 st.set_page_config(page_title="Agricultural Practices | FarmCarbon MRV",layout="wide")
+from farmcarbon.components.theme import apply_theme
+apply_theme()
+
 @st.cache_resource
 def runtime(): return build_runtime()
 rt=runtime(); repo=rt["repo"]

@@ -7,6 +7,9 @@ from farmcarbon.runtime import build_runtime
 from farmcarbon.services.soil_carbon_service import calculate_soc_stock, compare_samples
 
 st.set_page_config(page_title="Soil Carbon Analysis | FarmCarbon MRV",layout="wide")
+from farmcarbon.components.theme import apply_theme
+apply_theme()
+
 @st.cache_resource
 def runtime(): return build_runtime()
 rt=runtime(); repo=rt["repo"]
