@@ -1,6 +1,6 @@
 
 # FarmCarbon MRV - Python 3.12 dependencies
-
+pyarrow==19.0.1
 streamlit==1.45.1
 pandas==2.2.3
 numpy==1.26.4
